@@ -89,9 +89,9 @@ if predict_btn:
     input_data= scaler.transform(input_data)
     pred=model.predict(input_data)[0][1]
     if pred ==1:
-        st.error(f"High Risk:the patient is likely diabetic*,\n\n**Probaability**{prob:.2f}")
+        st.error(f'High Risk:the patient is likely diabetic **Probaability**{prob:.2f}')
     else:
-        st.success(f"low Risk: patient is not diabetic*.\n\n**Probability**{prob:.2f"}")
+        st.success(f'low Risk: patient is not diabetic* \n\n**Probability**{prob:.2f"}')
         st.write("----")
         st.markdown(
             "<p class='footer'"
