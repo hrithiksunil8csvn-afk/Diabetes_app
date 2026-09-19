@@ -81,7 +81,7 @@ with col2:
     skin=st.number_input("Skin Thickness",0,100)
     bmi=st.number_input("BMI",0.0,70.0)
     age=st.number_input("Age",0,120)
-st.markdown('</div',unsafe allow html=True)
+st.markdown('</div'>,unsafe allow html=True)
 st.write("")
 predict_btn=st.button("Predict Diabetes Risk")
 if predict_btn:
