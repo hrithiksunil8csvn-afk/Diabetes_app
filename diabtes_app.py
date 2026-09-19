@@ -64,11 +64,10 @@ scaler=joblib.load("scaler.pkl")
 
 #App header
 st.markdown('<div class="title">🩺  DiaSense</div>', unsafe_allow_html=True)
-st.markdown('<div class="Subtitle">Smart Diabetes Risk Analyzer</div>',
-           unsafe_allow_html=True)
+st.markdown('<div class="Subtitle">Smart Diabetes Risk Analyzer</div>',unsafe_allow_html=True)
 
 #Input Section
-st.markdown('<div> class="card">', unsafe_allow_html=True)
+st.markdown('<div> class="card">',unsafe_allow_html=True)
 col1, col2=st.columns(2)
 with col1:
     preg=st.number_input("Pregnancies",0,20,step=1)
@@ -93,6 +92,4 @@ if predict_btn:
     else:
         st.success(f'low Risk: patient is not diabetic* \n\n**Probability**{prob:.2f"}')
         st.write("----")
-        st.markdown(
-            "<p class='footer'"
-        )
+        st.markdown("<p class='footer'>")
