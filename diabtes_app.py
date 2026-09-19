@@ -63,7 +63,7 @@ model=joblib.load("diabetes_model.pkl")
 scaler=joblib.load("scaler.pkl")
 
 #App header
-st.markdown('<div class="title">🩺  DiaSense</div>', unsafe_allow_html=True)
+st.markdown('<div class="title">🩺  DiaSense</div>',unsafe_allow_html=True)
 st.markdown('<div class="Subtitle">Smart Diabetes Risk Analyzer</div>',unsafe_allow_html=True)
 
 #Input Section
