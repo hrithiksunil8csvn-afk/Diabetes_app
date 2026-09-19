@@ -1,1 +1,1 @@
-# Diabetes_app
+##### Simple Diabetes Prediction App designed using Streamlit 
