@@ -45,9 +45,8 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# Load Model and Scaler
+# Load Model
 model = joblib.load("diabetes_model.pkl")
-scaler = joblib.load("scaler.pkl")
 
 # App header
 st.markdown('<div class="title">🩺 DiaSense</div>', unsafe_allow_html=True)
@@ -58,7 +57,6 @@ st.markdown(
 
 # Input Section
 st.markdown('<div class="card">', unsafe_allow_html=True)
-
 col1, col2 = st.columns(2)
 
 with col1:
@@ -74,13 +72,13 @@ with col2:
     age = st.number_input("Age", 0, 120)
 
 st.markdown("</div>", unsafe_allow_html=True)
-
 st.write("")
+
 predict_btn = st.button("Predict Diabetes Risk")
 
 if predict_btn:
+    # Prepare input feature array
     input_data = np.array([[preg, glucose, bp, skin, insulin, bmi, dpf, age]])
-    input_data = scaler.transform(input_data)
 
     # Get binary prediction and probability score
     pred = model.predict(input_data)[0]
